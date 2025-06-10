@@ -1,0 +1,723 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><meta content="IE=9; IE=8; IE=7; IE=EDGE" http-equiv="X-UA-Compatible" /><title>
+	Epanjiyan Rajasthan, Registration & Stamps [IGRS]
+</title><meta name="description" content="A platform where citizen can evaluate his property or land, Find location wise DLC rates and information about Fees &amp; rebate for documents which can be registered at SR office and Search/ Track the status of his document." /><meta name="keywords" content="epanjiyan, registraion, stamps, raj stamps, prouser detailsperty, valuation, dlc, rates, document fees, rebate, sub registrar, sro" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="Styles/main.css?v=1.1" rel="stylesheet" />
+    <link href="Styles/skin.css" rel="stylesheet" />
+    <link href="css/dashboard.css" rel="stylesheet" />
+    <link href="Content/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/jquery_Latest.min.js" type="text/javascript"></script>
+    
+    <script src="Scripts/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.format.1.05.js" type="text/javascript"></script>
+    <script src="Scripts/bootstrap.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.signalR.min.js" type="text/javascript"></script>
+    <script src="signalr/hubs" type="text/javascript"></script>
+        <link href="Styles/Menu_css/styles.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+        window.history.forward();
+        function noBack() { window.history.forward(); }
+    </script>
+    <script src="Scripts/chosen.jquery.min.js" type="text/javascript"></script>
+    <script src="Scripts/IgrsScript.js?v=1.1" type="text/javascript"></script>
+    <link href="Content/chosen.min.css" rel="stylesheet" type="text/css" />
+            <link href="theme/css/font-awesome.css" rel="stylesheet" />
+
+    <script language="javascript" type="text/javascript">
+        //Function to disable Cntrl key/right click
+
+        function DisableControlKey(event) {
+            if (event.which == 17 || event.button == 1 || event.ctrlKey) {
+                alert("Note : Due to security reason some event is not allowed.");
+                return false;
+            }
+            else {
+                return true;
+            }
+
+        }
+    </script>
+    
+</head>
+<body onmousedown="DisableControlKey(event)">
+    <form method="post" action="./e-search-page.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="ScriptManager1_HiddenField" id="ScriptManager1_HiddenField" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=Cvwli61LHXPNZfLkIB10d21lCybtQ03xJ9hbRsFpwDKt1-Tt7eweQWyhfKCr9P-CgWv1tlrPSE67alA9m4Qi6HrV6gw1&amp;t=638047990454145774" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=CUkm5MvfKbEcsIYekogFPOLYD1cURrNd1-q9WnjwQUNjuV8ShHTPusPQbMsxcV_AN6Rx2SJEWqCMPPqjvoIeknNfDlb-DQcC1A9ERZEf0OXMvsyW9TIHpv7fRLWV9Uy96t8Uvjp9POEiA53Zz_VWquvygNY1&amp;t=ffffffffa0bc9515" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=PWdOvLFmbnXF7ZYyIzcZfidLn1V-XczZCptyjOVDGV-7i9liN3ndvf23AwNmq1cvZJ0-FwQV2rWHj2JIbk-o6TnnxSbRC-kCjJfshCouT9In8yUe0&amp;t=ffffffffdc32f924" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=v4CF7A4yhP4eUVQCm_4YDgQj5iEoHejKhSBvrItBsBPOGxDjya7rykIUzlGMvrppUNW9MvipIP0zGyxRXINQEWr8WfuXq1UcGItLy2Uh4fb8PUhBuBisl2SJkgRHc5wTSSiRCQ2&amp;t=ffffffffdc32f924" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="59A5EC9F" />
+	<input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
+	<input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="+ylo8JqzDRDdOlgXE0bnD5B9xk4Ih4dez2YNNLxLbuy1sWCUAfRHEtoCi6ZCSebBKmzKCdcM++cVlOWx/+nhuBlLqR1rMnF65IZF0dhRPRXo1O57veL+mru0NB60NYYzGL5tOiG1CKOaUpgL8BmYS3UYY4XFqSXHTrhtbE/QrIS2y430OhtX1NUWzMlVepqN8HeCYbY+q3ts/nN9XzbwS3L8QUfa4PTq5nuEGoSZgi8lkPl9Jri3rJsn7aYJWIhoKDG1o5dvPT0Keg1OQqgMEC+4bMNiRetSWuv2SwQWYy2j06iFLb3svj8frSDzNiYmzqTm9IgVsUDjSmSIEtQjQcD6LxW00UyT720GpkfCzJNZu46kowwGCEBLDT58PXrs/YivC2jeMdY+xrHz6VtGBefeCJ+kTfw1HhfZDezeEg144+BiQEkVf71IgMj6gJPwZA5+h7oPRrGlponjZ4G58Iorn42P4r1S7THwPz28ZflFat4pOntwOD/AEpdxjWoOKkE8QjPZKW3l1oVxPGKWOxd4M+z5zm4EfXCLu+5bWQXm3tAhO6GdA2vY9pc9qXo3PNcRQNIrLDuNZGDUG3mFOV5pnDLrFQ0dx1LL/FQifBJ0N8UDlhRHzX0/eEdc7Ty21MMSyjvJniYauqaWUVFSOSrjtJDmBWndCKrdflnZI+38OKqXPZkERUM4OZO4O1x3cZta5w09NEh4UAv+h72xdl0jbjeVcPblTS0H6xC6o1xKuUkCFkVFbWN1KwcHgiBvsi28iv56OYLgTWGtHy79WowbnvEeWygdh2FLhoCHMQO/goe3Tbvh9LxRC0Uy6BAbo9hAjsmQ5rDVZUW02/MDFm8y3XU0FhfkNgH7p6/Dqj1Ye205+bE+0mdD0W0AFoNvl1id5zuctm1czeL9OiKtQhux32pK+1N9Pt/hGNOhooGIzET3XVhWE6tukfHlI41iwhNQFpyd5u3njNeZC3brh2aL3gRBN7frHLdeuMaIkC/hXCSVXZkHf7H53Q6UXpU1vGjo0fIVGRpV2cn9Rm+JQx58Zd2rRQSGnF7o3CWs+lZ2pIv9TyPU8nouMyWRlxHT6h15fN+vgiWklp9ypGmgvDN+pPKsxFw7YrJcYXYfde8f6ZSrAlb0M8e0s3OIZuS7cxPED3xq3D+5uICN0RGhhEFpiVINeP5y2TXLAVdv2L5n0N5OCmy9U9rhVuIsnsRNwP5T/scHlXo0Ws8kJ5HuyrbmbbsYHIHg96LBCutyLgbARipGbw0f+ZOJ/zS5nH28orJGebsvk2Nqeko8qdKMZ/7x75u6NmGoYYaQB2xbWVquzu8N89XNfjq8mDw8oR9mTYErTPb8zbpR4K640pAV17wRhVcIN3UAg+fcSRfQZQpdw177x7UFxHMMCEJuySdBik5j91D4l8cMdE9WYV52asijkmJP0kjf0xDjlxAhc+sTqR7lvoab+WzIyEm/ytYto6jdeRBtp4IhNun2THFIcK12++ozsra6USNOsnDPVI/KN0so2NoK53Z9r6CVK4/ctvoHgrqNH9uWGEmb98/jOkfnt+O6huHVyn88X5yi3vogn6LDgmWJIbBs0Y3Uk7ThUfANxZoFXZrE0veBP8QQ58s5d0502NRpxbcvHR1lDKx0+CJeHooI2wSKXBozG6NPYMALbFamuPINMMP1i3QmfOgF7KokaaWNcVkcdCAC8iAdSIFjkgx5Lkm0eYzlm2/ILxcsnNU+0A7P4QKO3SIkYBclYOzWQSFk3/p12PM3uOdNaEwgaYnoIzQSpclnIFWAT/bSIPHtFUtDUb1EliCb15QBy4JGuLo1X2KcCZYckaOD9zhhYwZtEYc5/dFrneTvC5JXMYu+ncOVo6pcy1WWJXJDABBpVDXrU/GQ9516ROp3qzUTbZEp8rIKsSutkuxD1V63I/c+ZAhFE0Eibeq1RMaaI2An14U5z/jBRwDAzp0Kpr6anTxjoXvaTTJN42i9WUZJueWctp8+rZ1hVyi9PERikNPrrOLQu0XyFTf7MCAWjbsodbBd6q7kng1eceKwzqy0m7vjKSYFV57j0jW9X6Kz5EtMUZvoMGWAhQCabTu/in+QDqPcUjW80q+sqrz3tN2PpfcjegfIUv5ZyBOoGNKmf9KJQK5CFHeUwPfPfGT2AW7YFMsMEv6MeLdMXhY5QqNtF5xANMG/AwMNpVwkydnDPTUJFZyT46gT4FMadkxSI4ITERp5FljT22WZRGY81CRK8KZiEJvie7r66z4MEZHi1HpVWJ8wrlPW7dL0MglaifCd5t/ueJvGeLC2ld23LmRrgnvXaruzxr4vHkF+LayVq4z+GCr8nqFTcV+uhOYKhBTKXD2+IGbesTSOO9xmNXq82IKkRWrwb+hyidoIHV8BbM9YMakbj3wNOufCoG7kltmDc1kV4GywpG9cCbw4wTTDIl7yVRDqkqLhLfyz7L4HDeBEqQK7ksbY4XvTgkJk0kjAc31TPG0nLJiPIjFDFBmLmg==" />
+</div>
+        <div class="page-wrap">
+            <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['tctl00$UpdatePanel1','UpdatePanel1','tctl00$upContent','upContent','tctl00$ContentPlaceHolder1$UpdatePanel2','ContentPlaceHolder1_UpdatePanel2'], [], [], 600, 'ctl00');
+//]]>
+</script>
+
+
+
+            <div id="UpdatePanel1">
+	
+                    <div id="container">
+                         <div id="head-container">
+                            <div id ="upperhead"  >
+                            <div style ="background-color: #09564e; color: white; font-weight :bold ;" >
+                                 <span id="lblversion" class="labelAll"> Version : 2.0.01.23</span>
+                        <a id="lnksra" class="labelAll" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$lnksra&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;">Screen Reader Access</a>
+                        <div style="display: -webkit-inline-box;">
+
+                            <span><a class="font-button plus" style="color: white">A <sup>+ </sup></a>
+                                <a class="font-button normal" style="color: white">&nbsp; A </a>
+                                <a class="font-button minus" style="color: white">&nbsp; A<sup>-</sup></a></span>
+                        </div>
+                                                        
+                                 <span id="lblUserRole" style="color: yellow; float:right;margin-right :5px;  "></span>
+                            </div>
+                        </div>
+                             
+                           <div  style ="padding: 0px;
+    text-align: center;
+    background: white;" >
+                                <img src="theme/Images/header.png"  alt="head" width ="100%" >
+                             
+                            </div>
+
+                               <div id="cssmenu"  style ="margin :auto ;">
+                            <ul>
+                                    <li>  
+                                          
+                                       </li>
+                    
+                        
+                        
+                            <li>
+                                <a id="rpt_headermenuu_asd_0" title="Home" href="Home.aspx">
+                                     <i class='fa fa-home  fa-lg'></i> Home</a>
+                                
+                                
+
+                                
+                                        <ul>
+                                    
+                                        </ul>
+                                    
+
+                            </li>
+                        
+                            <li>
+                                <a id="rpt_headermenuu_asd_1" title="Information Service">
+                                     <i class='fa fa-info fa-lg'></i> Information Service</a>
+                                
+                                
+
+                                
+                                        <ul>
+                                    
+                                        <li>
+                                            <a id="rpt_headermenuu_rptsubmenu_1_asd1_0" title="Property Valuation for Citizen" href="citizen/propertydistrict.aspx">Property Valuation for Citizen</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a id="rpt_headermenuu_rptsubmenu_1_asd1_1" title="Document wise Fees &amp; Rebate" href="https://igrs.rajasthan.gov.in/writereaddata/Portal/Images/fees_new.pdf" target="_blank1">Document wise Fees & Rebate</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a id="rpt_headermenuu_rptsubmenu_1_asd1_2" title="DLC Rate Information" href="dlcdistrict.aspx">DLC Rate Information</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a id="rpt_headermenuu_rptsubmenu_1_asd1_3" title="Online Refund Application" href="Refund/onlinerefund.aspx">Online Refund Application</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a id="rpt_headermenuu_rptsubmenu_1_asd1_4" title="Citizen Charter" href="http://igrs.rajasthan.gov.in/citizen.htm" target="_blank1">Citizen Charter</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a id="rpt_headermenuu_rptsubmenu_1_asd1_5" title="Timeline for Document Registration" href="http://igrs.rajasthan.gov.in/writereaddata/Portal/Images/pdf/circular_20-2002.pdf" target="_blank1">Timeline for Document Registration</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a id="rpt_headermenuu_rptsubmenu_1_asd1_6" title="Property Registration Procedure" href="Image/Property_Registration_Procedure.pdf" target="_blank">Property Registration Procedure</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a id="rpt_headermenuu_rptsubmenu_1_asd1_7" title="District Wise Sub Registrar Office" href="http://igrs.rajasthan.gov.in/sub-registrar-list.htm" target="_blank1">District Wise Sub Registrar Office</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a id="rpt_headermenuu_rptsubmenu_1_asd1_8" title="Stamp Vendor License" href="Stampvendor/Stampvendorlogin.aspx" target="blank1">Stamp Vendor License</a>
+                                        </li>
+                                    
+                                        </ul>
+                                    
+
+                            </li>
+                        
+                            <li>
+                                <a id="rpt_headermenuu_asd_2" title="Search">
+                                     <i class='fa fa-search fa-lg'></i> Search</a>
+                                
+                                
+
+                                
+                                        <ul>
+                                    
+                                        <li>
+                                            <a id="rpt_headermenuu_rptsubmenu_2_asd1_0" title="e-Inspection / Search(e-Panjiyan)" href="e-search-page.aspx">e-Inspection / Search(e-Panjiyan)</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a id="rpt_headermenuu_rptsubmenu_2_asd1_1" title="Search before e-Panjiyan" href="https://reams.rajasthan.gov.in/RegNStampsGuestSearch/RegNStampsGuestSearch" target="_blank">Search before e-Panjiyan</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a id="rpt_headermenuu_rptsubmenu_2_asd1_2" title="Land Dispute Details" href="Viewcourtstaylist.aspx" target="_blank">Land Dispute Details</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a id="rpt_headermenuu_rptsubmenu_2_asd1_3" title="Track CRN/Document Status" href="Citizen/docdetail.aspx">Track CRN/Document Status</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a id="rpt_headermenuu_rptsubmenu_2_asd1_4" title="Decision of DIG Cases" href="dig/dig_showdecision.aspx">Decision of DIG Cases</a>
+                                        </li>
+                                    
+                                        </ul>
+                                    
+
+                            </li>
+                        
+                            <li>
+                                <a id="rpt_headermenuu_asd_3" title="Help &amp; Tutorial">
+                                     <i class='fa fa-question-circle fa-lg'></i> Help & Tutorial</a>
+                                
+                                
+
+                                
+                                        <ul>
+                                    
+                                        <li>
+                                            <a id="rpt_headermenuu_rptsubmenu_3_asd1_0" title="e-Gras Manual" href="Images/egrasHelp.pdf" target="_blank">e-Gras Manual</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a id="rpt_headermenuu_rptsubmenu_3_asd1_1" title="ePanjiyan Manual for citizen" href="Image/e-Panjiyan_Manual_for_Citizen.pdf" target="_blank">ePanjiyan Manual for citizen</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a id="rpt_headermenuu_rptsubmenu_3_asd1_2" title="Refund Video Tutorial" href="Downloads/refund_citizen_tutorial.mp4" target="_blank">Refund Video Tutorial</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a id="rpt_headermenuu_rptsubmenu_3_asd1_3" title="e-Stamp" href="Image/e-Stamp.jpg" target="_blank">e-Stamp</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a id="rpt_headermenuu_rptsubmenu_3_asd1_4" title="Auto Mutation Process" href="Images/videofile.mp4" target="_blank">Auto Mutation Process</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a id="rpt_headermenuu_rptsubmenu_3_asd1_5" title="FAQs" href="FAQ.aspx">FAQs</a>
+                                        </li>
+                                    
+                                        </ul>
+                                    
+
+                            </li>
+                        
+                            <li>
+                                <a id="rpt_headermenuu_asd_4" title="Notification &amp; Circulars">
+                                     <i class='fa fa-bell fa-lg'></i> Notification & Circulars</a>
+                                
+                                
+
+                                
+                                        <ul>
+                                    
+                                        <li>
+                                            <a id="rpt_headermenuu_rptsubmenu_4_asd1_0" title="Notification (IGRS)" href="https://igrs.rajasthan.gov.in/sm/order/sub-category-links/22196/121/3" target="_blank1">Notification (IGRS)</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a id="rpt_headermenuu_rptsubmenu_4_asd1_1" title="Circular (IGRS)" href="https://igrs.rajasthan.gov.in/sm/department-order/22178/121/2/2128/0/0/0/0" target="_blank1">Circular (IGRS)</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a id="rpt_headermenuu_rptsubmenu_4_asd1_2" title="Notification (Finance)" href="https://finance.rajasthan.gov.in/website/ShowData.aspx" target="_blank1">Notification (Finance)</a>
+                                        </li>
+                                    
+                                        </ul>
+                                    
+
+                            </li>
+                        
+                          
+                          </ul>
+                </div>
+                        </div>
+                      
+
+
+
+
+
+
+                        
+                        <div id="tblMain">
+		
+                            <table style="    background-color: #edf6f3; margin-top: 15px; min-height: 500px; min-width: 1100px; -moz-border-radius: 10px;
+     -webkit-border-radius: 10px; border-radius: 10px; margin-left: auto; margin-right: auto; "
+                                cellpadding="0" cellspacing="0" border="0" align="center" >
+                                
+
+                                
+                                <tr>
+                                    <td align="center" valign="top">
+                                        <div id="upgr" style="display:none;">
+			
+                                                <div class="overlay">
+                                                </div>
+                                                <div class="overlayContent">
+                                                    <img id="imgLoad" src="Content/Images/load.gif" alt="Loading" />
+                                                </div>
+                                            
+		</div>
+                                  
+                                        <div id="upContent">
+			
+                                                
+    <center>
+        <div id="ContentPlaceHolder1_pnlLoin" style="width:1270px;">
+				
+            <div class="divlogin shadow" style="margin: auto; width: 781px;">
+                <div class="headtext">
+                    <span>View e-Inspection/Search by multiple parameters </span>
+                </div>
+                <div id="ContentPlaceHolder1_pnlLogin">
+					
+
+                    <table cellpadding="5" cellspacing="5">
+                        <tr>
+                            <td style="width: 150px; font-weight: bold;">
+                                <label for="ddlDistrict">Location Type :<span class="auto-style1">*</span></label></td>
+                            <td colspan="3">
+                                <span style="font-weight:bold;"><input id="ContentPlaceHolder1_rbturban" type="radio" name="ctl00$ContentPlaceHolder1$a" value="rbturban" checked="checked" /><label for="ContentPlaceHolder1_rbturban">Urban</label></span>
+                                <span style="font-weight:bold;"><input id="ContentPlaceHolder1_rbtrural" type="radio" name="ctl00$ContentPlaceHolder1$a" value="rbtrural" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$rbtrural\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="ContentPlaceHolder1_rbtrural">Rural</label></span>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td style="width: 150px; font-weight: bold;">
+                                <label for="ddlDistrict">District :<span class="auto-style1">*</span></label></td>
+                            <td style="width: 180px;">
+                                <select name="ctl00$ContentPlaceHolder1$ddlDistrict" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlDistrict\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_ddlDistrict" class="chzn-select" style="height:22px;width:175px;margin-left: 0px; margin-right: 0px;">
+						<option selected="selected" value="- Select District -">- Select District -</option>
+						<option value="1">AJMER</option>
+						<option value="5">ALWAR</option>
+						<option value="34">ANUPGARH</option>
+						<option value="35">BALOTRA</option>
+						<option value="24">BANSWARA</option>
+						<option value="29">BARAN</option>
+						<option value="8">BARMER</option>
+						<option value="36">BEAWAR</option>
+						<option value="10">BHARATPUR</option>
+						<option value="6">BHILWARA</option>
+						<option value="2">BIKANER</option>
+						<option value="11">BUNDI</option>
+						<option value="22">CHITTORGARH</option>
+						<option value="3">CHURU</option>
+						<option value="7">DAUSA</option>
+						<option value="37">DEEDWANA-KUCHAMAN</option>
+						<option value="38">DEEG</option>
+						<option value="13">DHOLPUR</option>
+						<option value="39">DUDU</option>
+						<option value="20">DUNGARPUR</option>
+						<option value="28">GANGANAGAR</option>
+						<option value="40">GANGAPUR CITY</option>
+						<option value="31">HANUMANGARH</option>
+						<option value="9">JAIPUR</option>
+						<option value="41">JAIPUR RURAL</option>
+						<option value="15">JAISALMER</option>
+						<option value="18">JALORE</option>
+						<option value="17">JHALAWAR</option>
+						<option value="4">JHUNJHUNU</option>
+						<option value="14">JODHPUR</option>
+						<option value="42">JODHPUR-RURAL</option>
+						<option value="32">KAROLI</option>
+						<option value="43">KEKRI</option>
+						<option value="44">KHERTHAL-TIJARA</option>
+						<option value="26">KOTA</option>
+						<option value="45">KOTPUTLI - BEHROD</option>
+						<option value="21">NAGAUR</option>
+						<option value="46">NEEM KA THANA</option>
+						<option value="16">PALI</option>
+						<option value="47">PHALODI</option>
+						<option value="33">PRATAPGARH</option>
+						<option value="30">RAJSAMAND</option>
+						<option value="48">SALUMBAR</option>
+						<option value="49">SANCHORE</option>
+						<option value="25">SAWAI MADHOPUR</option>
+						<option value="50">SHAHPURA</option>
+						<option value="23">SIKAR</option>
+						<option value="19">SIROHI</option>
+						<option value="12">TONK</option>
+						<option value="27">UDAIPUR</option>
+
+					</select></td>
+                            <td style="width: 150px; font-weight: bold;">
+                                <label for="ddlSRO">Tehsil :<label for="ddlDistrict"><span class="auto-style1">*</span></label></label></td>
+                            <td style="width: 180px;">
+                                <select name="ctl00$ContentPlaceHolder1$ddlTehsil" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlTehsil\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_ddlTehsil" class="chzn-select" style="height:22px;width:175px;margin-left: 0px; margin-right: 0px;">
+
+					</select></td>
+                        </tr>
+                        <tr>
+						<td style="width: 150px; font-weight: bold;">
+                                <label for="ddlSRO">SRO :</label><span class="auto-style1">*</span></td>
+						<td colspan="3">
+                                <select name="ctl00$ContentPlaceHolder1$ddlSRO" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlSRO\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_ddlSRO" class="chzn-select" style="height:22px;width:100%;margin-left: 0px; margin-right: 0px;">
+							<option selected="selected" value="- Select SRO -">- Select SRO -</option>
+
+						</select>
+                                <span id="ContentPlaceHolder1_ddlsrorequired" style="color:Red;visibility:hidden;">Please select sro</span>
+                            </td>
+					</tr>
+					
+                        <tr>
+                            <td style="width: 150px; font-weight: bold;">
+                                <span id="ContentPlaceHolder1_lblcolony">Colony :</span>
+                            </td>
+                            <td style="width: 180px;" colspan="3">
+                                <select name="ctl00$ContentPlaceHolder1$ddlcolony" id="ContentPlaceHolder1_ddlcolony" class="chzn-select" style="height:22px;width:543px;margin-left: 0px; margin-right: 0px;">
+
+					</select>
+                                
+
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td style="width: 150px; font-weight: bold;">
+                                <label for="ddldocument">Document type :<label for="ddlDistrict"><span class="auto-style1">*</span></label></label></td>
+                            <td style="width: 180px;">
+                                <select name="ctl00$ContentPlaceHolder1$ddldocument" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddldocument\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_ddldocument" class="chzn-select" style="height:22px;width:175px;margin-left: 0px; margin-right: 0px;">
+						<option selected="selected" value=" -- Select -- "> -- Select -- </option>
+						<option value="35">Affidavit</option>
+						<option value="1">Agreement</option>
+						<option value="2">Any Document in Favor of Govt.</option>
+						<option value="1018">Any Document related to movable property</option>
+						<option value="1007">Assignment Deed for the purpose of assigning or transferring his right in favour of another person to get the lease deed</option>
+						<option value="27">Award</option>
+						<option value="75">Bank Guarantee</option>
+						<option value="28">Cancellation Deed</option>
+						<option value="3">Certificate Of Sale</option>
+						<option value="95">CM/PM Awas Yojana</option>
+						<option value="53">Composition Deed</option>
+						<option value="73">Concession Agreement</option>
+						<option value="90">Consent Deed</option>
+						<option value="54">Counter Part or Duplicate</option>
+						<option value="20">Exchange Deed</option>
+						<option value="33">Filing of translation us-62</option>
+						<option value="8">Further charge</option>
+						<option value="7">Gift Deed</option>
+						<option value="1009">Lease Deed</option>
+						<option value="1017">Lease Deed - Mining Lease Deed</option>
+						<option value="1010">Lease Deed after public auction or on allotment/sale by Govt./ULB/State Enterprises</option>
+						<option value="1014">Lease Deed Allotment and Sold By State Govt./ULB//State Enterprises/ other Government bodies</option>
+						<option value="1003">Lease Deed Free Hold</option>
+						<option value="1025">Lease deed of a unit in Multistorey Building exceeding 4 floors</option>
+						<option value="1015">Lease under Start-up policy</option>
+						<option value="81">Leave and License</option>
+						<option value="80">Limited Liability Partnership (LLP)</option>
+						<option value="89">Loan to set up a Micro, Small or Medium Enterprises as defined in the Micro, Small and Medium Enterprises Development Act, 2006, or enhancing credit facility or transfer of loan account from one bank to another by Micro, Small or Medium Enterprises, in the State.</option>
+						<option value="10">Mortgage deed</option>
+						<option value="1005">New Lease Deed after Sub Division of land</option>
+						<option value="1013">New Lease on Freehold/Leasehold basis after land use change</option>
+						<option value="1012">New Lease on Freehold/Leasehold basis after reconstitution of two or more plots</option>
+						<option value="101">Order of  land use change or conversion of land</option>
+						<option value="11">Partition deed</option>
+						<option value="13">Re-Conveyance</option>
+						<option value="14">Release Deed</option>
+						<option value="17">Sale Deed</option>
+						<option value="15">Settlement</option>
+						<option value="18">Supplementary Deed/Correction Deed</option>
+						<option value="39">Surrender of Lease</option>
+						<option value="1023">The Lease deed issued/ executed by the State Govt./ ULB/ State Enterprises/ other Govt. Bodies, in respect of land allotted or sold by them or land placed at the disposal of the Local Authorities under section 90-A of RLRA 1956- The Lease deed issued/ executed through Allotment/ Sale/90-A Lease</option>
+						<option value="38">Transfer of Lease by way of assignment</option>
+						<option value="19">Trust Deed</option>
+						<option value="21">Work Contract</option>
+
+					</select></td>
+                            
+                            <td style="width: 150px; font-weight: bold;">
+                                <label for="ddldocumentsub" style="display: none;">Party type :</label></td>
+                            <td style="width: 180px;">
+                                
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 150px; font-weight: bold;">
+                                <label for="facevalue">Party Name</label></td>
+                            <td>
+                                <input name="ctl00$ContentPlaceHolder1$txtexcutent" type="text" id="ContentPlaceHolder1_txtexcutent" class="ValidAlphabate" style="width:170px;" /></td>
+                            <td style="width: 150px; font-weight: bold;">
+                                <label for="eveluatedvalue">Document No</label></td>
+                            <td>
+                                <input name="ctl00$ContentPlaceHolder1$txtclaiment" type="text" maxlength="15" id="ContentPlaceHolder1_txtclaiment" class="textbox OnlyNumberNoDecimal" style="width:170px;" /></td>
+                        </tr>
+                        <tr>
+                            <td style="width: 150px; font-weight: bold;">
+                                <label for="facevalue">Party Address</label></td>
+                            <td>
+                                <textarea name="ctl00$ContentPlaceHolder1$txtexecutentadd" rows="2" cols="20" id="ContentPlaceHolder1_txtexecutentadd" class="ValidAddress" style="height:100px;width:170px;">
+</textarea></td>
+                            <td style="width: 150px; font-weight: bold;">
+                                <label for="eveluatedvalue">Property Address</label></td>
+                            <td>
+                                <textarea name="ctl00$ContentPlaceHolder1$txtprprtyadd" rows="2" cols="20" id="ContentPlaceHolder1_txtprprtyadd" class="ValidAddress" style="height:100px;width:170px;">
+</textarea></td>
+                        </tr>
+
+
+                    </table>
+
+                    <div id="ContentPlaceHolder1_UpdatePanel2">
+						
+                            <table cellpadding="5" cellspacing="5">
+                                <tr id="ContentPlaceHolder1_trImageCode">
+							<td></td>
+							<td style="text-align: center;">
+                                        <img id="ContentPlaceHolder1_Image1" src="CImage.aspx?t=10/06/2025 15:12:43" style="height:36px;width:135px;" />
+                                        <input type="image" name="ctl00$ContentPlaceHolder1$btnrefresh1" id="ContentPlaceHolder1_btnrefresh1" src="Images/refresh1.png" style="height: 36px; width: 36px;" />
+                                    </td>
+						</tr>
+						
+                                <tr id="ContentPlaceHolder1_trtxtImagecode">
+							<td style="text-align: center; float: left;">
+                                        <span id="ContentPlaceHolder1_Label4" class="lbl">Verification Code</span>
+                                    </td>
+							<td style="text-align: center;">
+                                        <input name="ctl00$ContentPlaceHolder1$txtimgcode" type="text" maxlength="6" id="ContentPlaceHolder1_txtimgcode" class=" textbox" placeholder="Enter Verification Code" autocomplete="off" style="width:160px;" />
+                                        <span id="ContentPlaceHolder1_rqftxtimgcode" style="display:none;"></span>
+                                    </td>
+						</tr>
+						
+                            </table>
+                        
+					</div>
+                    <div class="t-center">
+                        <input type="submit" name="ctl00$ContentPlaceHolder1$btnsummary" value="View Summary" onclick="if(Page_ClientValidate(&#39;_form&#39;)) return ValidatePageSummary();WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnsummary&quot;, &quot;&quot;, true, &quot;_form&quot;, &quot;&quot;, false, false))" id="ContentPlaceHolder1_btnsummary" class="button blue" />
+
+                    </div>
+                
+				</div>
+            </div>
+            <br />
+
+            <div>
+
+				</div>
+
+
+        
+			</div>
+    </center>
+      
+
+                                            
+		</div>
+                                    </td>
+                                </tr>
+                            </table>
+                        
+	</div>
+
+                    </div>
+
+                    <input type="hidden" name="ctl00$hdnCSRF" id="hdnCSRF" />
+                
+</div>
+
+
+
+        </div>
+
+
+        <div id="footer" style="margin-bottom: 0!important; height: 95px!important;">
+
+            <div class="footerText">
+                <div style="text-align: center">
+
+
+                    <div>
+                        Data and Content provided & information owned, maintained and updated by : <span style="font-weight: bold; color: #fff">Registration & Stamps Department, Ajmer, Rajasthan</span>
+
+                    </div>
+                    <div>
+                        All queries/Comments regarding the contents may be sent at Registration & Stamps Department, Ajmer
+                        <br />
+                        
+                    </div>
+                </div>
+                <div style="text-align: left;">
+                    <span style="font-weight: bold; color: #fff">DISCLAIMER</span> <span>: Every endeavor has been made by the department to make available update, correct and accurate information on this Web portal. The errors, if any whenever brought to the notice will be rectified. As a result of updates and corrections, the web content is subject to change without any notice. If any information is not correct or it needs improvement, in this regard, the users are advised to verify, the correctness of the facts from the Department.
+                        
+                    </span>
+                    <img src="Images/nic2[1].jpg" style="float: right;" alt="NIC LOGOS" />
+                    <div style="text-align: center">
+                        Best Viewed in 1280x720 resolution Nodal Officer : Sh.Shelendra Goyal, Programmer Mobile : 9214600246 Telephone : 0141-2740503 Last modified
+                                on
+                                <span id="lblModifiedDate">15/09/2020</span>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("ContentPlaceHolder1_ddlsrorequired"), document.getElementById("ContentPlaceHolder1_rqftxtimgcode"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ContentPlaceHolder1_ddlsrorequired = document.all ? document.all["ContentPlaceHolder1_ddlsrorequired"] : document.getElementById("ContentPlaceHolder1_ddlsrorequired");
+ContentPlaceHolder1_ddlsrorequired.controltovalidate = "ContentPlaceHolder1_ddlSRO";
+ContentPlaceHolder1_ddlsrorequired.errormessage = "Please select sro";
+ContentPlaceHolder1_ddlsrorequired.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ContentPlaceHolder1_ddlsrorequired.initialvalue = "";
+var ContentPlaceHolder1_rqftxtimgcode = document.all ? document.all["ContentPlaceHolder1_rqftxtimgcode"] : document.getElementById("ContentPlaceHolder1_rqftxtimgcode");
+ContentPlaceHolder1_rqftxtimgcode.controltovalidate = "ContentPlaceHolder1_txtimgcode";
+ContentPlaceHolder1_rqftxtimgcode.focusOnError = "t";
+ContentPlaceHolder1_rqftxtimgcode.errormessage = "Please Enter Image Code";
+ContentPlaceHolder1_rqftxtimgcode.display = "None";
+ContentPlaceHolder1_rqftxtimgcode.validationGroup = "_form";
+ContentPlaceHolder1_rqftxtimgcode.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ContentPlaceHolder1_rqftxtimgcode.initialvalue = "";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("ScriptManager1_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        
+theForm.oldSubmit = theForm.submit;
+theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+theForm.oldOnSubmit = theForm.onsubmit;
+theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":"upContent","displayAfter":500,"dynamicLayout":true}, null, null, $get("upgr"));
+});
+
+document.getElementById('ContentPlaceHolder1_ddlsrorequired').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_ddlsrorequired'));
+}
+
+document.getElementById('ContentPlaceHolder1_rqftxtimgcode').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_rqftxtimgcode'));
+}
+//]]>
+</script>
+</form>
+    <script type="text/javascript">
+        function ValidatePageSummary() {
+
+            var ISillegalText = 1;
+            var textBoxID;
+            $(".ValidAddress").each(function () {
+                if (/[~`!@#$%\^&*()+=[\]\\';_{}|\\":<>\?]/g.test($(this).val()) == true) {
+                    ISillegalText = 0;
+                    textBoxID = $(this).attr("id");
+                }
+            });
+
+            $(".ValidAlphabate").each(function () {
+                if (/[\!\@\#\$\%\^\&\*\)\(\+\=\.\<\>\{\}\[\]\:\;\'\"\|\~\`\_\-]/g.test($(this).val()) == true) {
+                    ISillegalText = 0;
+                    textBoxID = $(this).attr("id");
+                }
+            });
+
+            if (ISillegalText == 0) {
+                alert('You entered illegal characters. [\!\@\#\$\%\^\&\*\)\(\+\=\.\<\>\{\}\[\]\:\;\'\"\|\~\`\_\-]');
+                //alert(textBoxID);
+                document.getElementById(textBoxID).value = "";
+                return false;
+            }
+
+            //ID_Details_Encryption();
+            //PAN_Encryption();
+        }
+    </script>
+</body>
+</html>
+
+
